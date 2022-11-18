@@ -1,0 +1,201 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 30px;
+}
+
+.header{
+    height: 95vh;
+    background-image: linear-gradient(to right bottom,hsla(111, 55%, 64%, 0.803),hsla(160, 64%, 43%, 0.803)),url('../pic1.jpg');
+    background-size: cover;
+    background-position:top ;
+    position: relative;
+
+    clip-path:polygon(0 0,100% 0,100% 75vh,0 100%) ; /* x y  x y*/
+}
+
+.logo-box{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    
+}
+
+.logo{
+    display: block;
+    height: 35px;
+}
+
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    text-align: center;
+
+    transform: translate(-50%,-50%);
+}
+
+.heading-primary{
+    color: #fff;
+    text-transform: uppercase;
+    /* backface-visibility: hidden; */ /*some times it needs when animation */
+    margin-bottom: 60px;
+}
+
+.heading-primary-main{
+    display: block;
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 35px;
+    animation-name: moveLeftToRight;
+    animation-duration: 2s;
+}
+
+.heading-primary-sub{
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 13.8px;
+    animation-name: moveRighttoLeft;
+    animation-duration: 2s;
+}
+
+
+/* we can do like below for button */
+/* .button-box{
+    display: block;
+    position: relative;
+}
+.button{
+    top: 100px;
+    left: 280px;
+    transform: translate(-50%,-50%);
+
+    position: absolute;
+    padding: 10px;
+    text-align: center;
+    color: black;
+    background-color: #fff;
+    display: block;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    opacity: 0.8;
+    width: 50%;
+}
+.button:hover{
+    cursor: pointer;
+} */
+
+@keyframes moveLeftToRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80%{
+        opacity: 1;
+        transform: translateX(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveRighttoLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80%{
+        opacity: 1;
+        transform: translateX(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+.btn:link{
+    text-decoration: none;
+    padding: 10px 40px;
+    text-transform: uppercase;
+   
+    display: inline-block;
+    border-radius: 100px;
+    border: none;
+    transition: all .2s;
+    position: relative;
+  
+}
+
+.btn-white{
+    background-color: #fff;
+    color: #777;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 10px rgb(48, 46, 46);
+}
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 0 0 rgb(48, 46, 46);
+
+
+}
+.btn::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 1s;
+}
+
+.btn-white::after{
+    background-color: #fff;
+}
+
+.btn:hover::after{
+    /* transform: scale(2); */
+    transform: scaleX(2) scaleY(1.4);
+    opacity: 0;
+}
+
+@keyframes moveTop{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    80%{
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.btn-animated{
+   animation: moveTop 2s;
+   animation-fill-mode: backwards;
+}

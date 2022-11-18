@@ -1,0 +1,22 @@
+{
+  "name": "mywebpage",
+  "version": "1.0.0",
+  "description": "This is my Sample animated web page just using css and html",
+  "main": "index.js",
+  "scripts": {
+    "start": "node-sass ./sass/main.scss ./MyWebPage.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rifkhankhan/MyWebPage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rifkhankhan/MyWebPage/issues"
+  },
+  "homepage": "https://github.com/Rifkhankhan/MyWebPage#readme",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
