@@ -69,34 +69,7 @@ body{
     animation-duration: 2s;
 }
 
-.btn:link{
-    text-decoration: none;
-    padding: 10px 40px;
-    text-transform: uppercase;
-   
-    display: inline-block;
-    border-radius: 100px;
-    border: none;
-    transition: all .2s;
-    position: relative;
-    
-}
 
-.btn-white{
-    background-color: #fff;
-    color: #777;
-}
-
-.btn:hover{
-    transform: translateY(-3px);
-    box-shadow: 5px 5px 10px rgb(48, 46, 46);
-}
-.btn:active{
-    transform: translateY(-1px);
-    box-shadow: 0 0 0 rgb(48, 46, 46);
-
-
-}
 /* we can do like below for button */
 /* .button-box{
     display: block;
@@ -154,6 +127,35 @@ body{
     }
 }
 
+
+.btn:link{
+    text-decoration: none;
+    padding: 10px 40px;
+    text-transform: uppercase;
+   
+    display: inline-block;
+    border-radius: 100px;
+    border: none;
+    transition: all .2s;
+    position: relative;
+  
+}
+
+.btn-white{
+    background-color: #fff;
+    color: #777;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 10px rgb(48, 46, 46);
+}
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 0 0 rgb(48, 46, 46);
+
+
+}
 .btn::after{
     content: "";
     display: inline-block;
@@ -164,7 +166,7 @@ body{
     top: 0;
     left: 0;
     z-index: -1;
-    transition: all .4s;
+    transition: all 1s;
 }
 
 .btn-white::after{
@@ -172,7 +174,28 @@ body{
 }
 
 .btn:hover::after{
-    transform: scale(2);
+    /* transform: scale(2); */
+    transform: scaleX(2) scaleY(1.4);
     opacity: 0;
 }
 
+@keyframes moveTop{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    80%{
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.btn-animated{
+   animation: moveTop 2s;
+   animation-fill-mode: backwards;
+}
