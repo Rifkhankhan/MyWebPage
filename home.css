@@ -1,8 +1,7 @@
 .section-about{
     background-color: #f7f7f7;
-    padding: 25rem 0;
+    padding: 15rem 0;
     margin-top: -20vh;
-    /* clip-path:polygon(0 0,100% 0,100% 75vh,0 100%) ; x y  x y */
 
 }
 
@@ -31,20 +30,24 @@
 .row{
     max-width: 90%;
     margin: 0 auto;
-    background-color: #4441db;
+   
 }
 
  .col-1{
-    background-color: #4441db;
+ 
+   
     max-width: 50%;
-    height: 200px auto;
+    float: left;
+    text-align: justify;
+    padding:10px ;
+    
 }
 
-.row .col-1{
-    background-color: #a65a0f;
-    width: 50%;
+.col-2{
+    max-width: 50%;
     float: left;
-    height: 500px;
+    padding:10px ;
+    margin-left: 10px;
 
 }
 
@@ -52,4 +55,97 @@
     content: "";
     clear: both;
     display: table;
+}
+
+.heading-about-1{
+    text-transform: uppercase;
+    font-size: large;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 15px;
+}
+
+.heading-about-2{
+    text-transform: uppercase;
+    font-size: large;
+    font-weight: 600;
+    margin-top: 60px;
+    margin-bottom: 15px;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.heading-about-p2,.heading-about-p1{
+    font-weight: bold;
+}
+
+.btn-more{
+    display: inline-block;
+    text-align: start;
+    margin-top: 15px;
+    padding: 3px;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid green;
+    color: green;
+    text-transform: uppercase;
+    transition: all .5s;
+}
+
+.btn-more:hover{
+    background-color: rgb(7, 189, 119);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 .1rem 2rem rgb(47, 41, 41);
+}
+
+.btn-more:active{
+    background-color: rgb(189, 49, 7);
+    color: white;
+    transform: translateY(5px);
+    box-shadow: 0 .1rem 2rem rgb(47, 41, 41);
+}
+
+.composition{
+    position: relative;
+}
+
+ .composition .photos{
+    position: absolute;
+   
+    width: 350px ;
+    height: 300px;
+    box-shadow: 0 1.5rem 4rem rgb(94, 52, 52);
+    /* border-radius: 2px; */
+    z-index: 10;
+    transition: all .5s;
+    outline-offset: 1.5rem;
+    
+}
+
+
+ .composition .composition_photo-1{
+    left:0;
+} 
+
+
+.composition .composition_photo-2{
+    left:14rem;
+    top: 2rem;
+}
+
+.composition .composition_photo-3{
+    left:5rem;
+    top: 10rem;
+
+} 
+
+.composition .photos:hover{
+    transform: scale(1.2);
+    z-index: 20;
+    outline: 1rem solid green;
+}
+
+.composition:hover .photos:not(:hover){
+    transform: scale(.9);
 }
