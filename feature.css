@@ -12,7 +12,7 @@
 
 
 .feature-section .row .col-1-of-4{
-    max-width: 20%;
+    max-width: 25%;
     float: left;
     padding:10px ;
 }
@@ -39,9 +39,7 @@
     margin-bottom: 0px;
 }
 
-.feature-section .row .col-1-of-4 .feature-box .icon-world{
-  
-}
+
 
 .feature-section .row .col-1-of-4 .feature-box .heading-tertiary{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
